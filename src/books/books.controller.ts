@@ -26,7 +26,7 @@ export class BooksController {
 
     @Delete()
     async deleteBook(@Query() query) {
-        const books = await this.booksService.deleteBook(query.bookID);
+        const books = await this.booksService.deleteBook(Number(query.bookID));
         return books;
     }
 }
